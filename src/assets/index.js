@@ -29,10 +29,10 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-import logos from "./logo.png"
+import logos from "./tech/logoo.png"
 
 export {
-  logo,
+  logos,
   backend,
   creator,
   mobile,
@@ -60,5 +60,4 @@ export {
   carrent,
   jobit,
   tripguide,
-  logos
 };
