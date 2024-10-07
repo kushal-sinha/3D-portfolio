@@ -11,7 +11,12 @@ const Hero = () => {
           <div className='h-5 w-5 rounded-full bg-[#915eff]' />
           <div className='w-1 sm:h-80 h-40 violet-gradient' />
         </div>
+        <div className=''>
+          <h1 className={`${styles.heroHeadText} text-white`}>Hi I'm <span className='text-[#915eff]'>Kushal</span></h1>
+          <p className={`${styles.heroSubText} mt-2 text-white`}>I specialize in developing and maintaining <br className='sm:block hidden' /> high-quality web and mobile applications using cutting-edge technologies like ReactJs, React Native, and Next.js.</p>
+        </div>
       </div>
+      <ComputersCanvas />
     </section>
   )
 }
