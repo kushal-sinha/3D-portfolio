@@ -23,7 +23,7 @@ const Navbar = () => {
             }}
           >
             <img src={logos} alt='logo' className='  object-contain' width={100} />
-            <p className='text-white text-[18px] font-bold cursor-pointer flex mb-20'>
+            <p className='text-white text-[18px] font-bold cursor-pointer flex '>
               Kushal Sinha &nbsp;
               <span className='sm:block hidden flex-col'>| Portfolio</span>
             </p>
