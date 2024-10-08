@@ -1,0 +1,5 @@
+mesh: A 3D container for your object.
+hemisphereLight: Soft light from the sky and ground.
+spotLight: A cone-shaped light, like a spotlight.
+pointLight: A light source emitting in all directions, like a light bulb.
+primitive: A wrapper to load and display an external 3D model (in this case, a computer).
