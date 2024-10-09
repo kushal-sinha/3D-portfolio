@@ -11,6 +11,7 @@ const CanvasLoader = () => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        marginTop: 80,
       }}
     >
       <span className='canvas-loader'></span>
@@ -19,7 +20,7 @@ const CanvasLoader = () => {
           fontSize: 14,
           color: "#F1F1F1",
           fontWeight: 800,
-          marginTop: 40,
+          marginTop: 70,
         }}
       >
         {progress.toFixed(2)}%

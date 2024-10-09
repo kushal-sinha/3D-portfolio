@@ -13,10 +13,22 @@ const Hero = () => {
         </div>
         <div className=''>
           <h1 className={`${styles.heroHeadText} text-white`}>Hi I'm <span className='text-[#915eff]'>Kushal</span></h1>
-          <p className={`${styles.heroSubText} mt-2 text-white`}>I specialize in developing and maintaining <br className='sm:block hidden' /> high-quality web and mobile applications using cutting-edge technologies like ReactJs, React Native, and Next.js.</p>
+          <p className={`${styles.heroSubText} mt-2 text-white`}>I specialize in developing and maintaining <br className='sm:block hidden' /> high-quality web and mobile applications .</p>
         </div>
       </div>
       <ComputersCanvas />
+      <div className='absolute  mt-4 w-full flex justify-center items-center'>
+        <a href='#about'>
+          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 '
+          >
+            <motion.div
+              animate={{ y: [0, 24, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, repeatType: 'loop' }}
+              className='w-3 h-3 rounded-full bg-secondary mb-1'
+            />
+          </div>
+        </a>
+      </div>
     </section>
   )
 }
