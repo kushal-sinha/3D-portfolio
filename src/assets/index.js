@@ -25,11 +25,16 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
-
+import suggaa from "./company/suggaa.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import logos from "./tech/logoo.png"
+import drizzle from "./drizzle.png"
+import neondb from "./neondb.png"
+import mocker from "./mocker.png"
+import dalle from './dalle.png';
+import portfolio from './portfolio.png'
 
 export {
   logos,
@@ -60,4 +65,11 @@ export {
   carrent,
   jobit,
   tripguide,
+  suggaa,
+  logo,
+  drizzle,
+  neondb,
+  mocker,
+  dalle,
+  portfolio
 };
