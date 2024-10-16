@@ -70,13 +70,12 @@ const ComputersCanvas = () => {
   };
 
   return (
-    <div style={{ width: '100%', height: '100%' }}>
+    <div style={{ width: '100%', height: '100vh', overflow: 'auto' }}>
       <Canvas
         frameloop='demand'
         shadows
         camera={getCameraProps()}
         gl={{ preserveDrawingBuffer: true }}
-        onScroll={true}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
@@ -84,7 +83,6 @@ const ComputersCanvas = () => {
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
             enablePan={false}
-
           />
           <Computers screenSize={screenSize} />
         </Suspense>
