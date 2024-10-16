@@ -54,7 +54,7 @@ const ComputersCanvas = () => {
       else setScreenSize('large');
     };
 
-    const handleScroll = () => {
+    const handleTouchMove = () => {
       setEnableControls(false);
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
@@ -63,12 +63,12 @@ const ComputersCanvas = () => {
     };
 
     window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('touchmove', handleTouchMove);
     handleResize(); // Initial call
 
     return () => {
       window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('touchmove', handleTouchMove);
     };
   }, []);
 
