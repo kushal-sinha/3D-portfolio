@@ -70,18 +70,12 @@ const ComputersCanvas = () => {
   };
 
   return (
-    <div style={{
-      width: '100%',
-      height: screenSize === 'small' ? '50vh' : '100vh',
-      position: 'relative',
-      overflow: 'hidden'
-    }}>
+    <div style={{ width: '100%', height: '100%' }}>
       <Canvas
         frameloop='demand'
         shadows
         camera={getCameraProps()}
         gl={{ preserveDrawingBuffer: true }}
-        style={{ position: 'absolute', top: 0, left: 0, zIndex: 1 }}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
