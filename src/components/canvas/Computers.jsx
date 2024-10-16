@@ -44,6 +44,8 @@ const Computers = ({ screenSize }) => {
 
 const ComputersCanvas = () => {
   const [screenSize, setScreenSize] = useState('large');
+  const [enableControls, setEnableControls] = useState(true);
+  let scrollTimeout = null;
 
   useEffect(() => {
     const handleResize = () => {
@@ -52,10 +54,22 @@ const ComputersCanvas = () => {
       else setScreenSize('large');
     };
 
+    const handleScroll = () => {
+      setEnableControls(false);
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        setEnableControls(true);
+      }, 200);
+    };
+
     window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
     handleResize(); // Initial call
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const getCameraProps = () => {
@@ -83,6 +97,7 @@ const ComputersCanvas = () => {
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
             enablePan={false}
+            enabled={enableControls}
           />
           <Computers screenSize={screenSize} />
         </Suspense>
