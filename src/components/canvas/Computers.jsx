@@ -76,6 +76,7 @@ const ComputersCanvas = () => {
         shadows
         camera={getCameraProps()}
         gl={{ preserveDrawingBuffer: true }}
+        onScroll={true}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
